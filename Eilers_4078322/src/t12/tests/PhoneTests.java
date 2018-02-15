@@ -3,6 +3,7 @@ package t12.tests;
 import java.io.File;
 
 import junit.framework.TestCase;
+import t12.T12itp;
 import t12.phones.console.ConsolePhone;
 import t12.spinphone.T12Interpreter;
 
@@ -52,7 +53,8 @@ public class PhoneTests extends TestCase {
 	public void setUp() {
 		phone = new ConsolePhone();
 		// Hier den eigenen T12Interpreter zuweisen:
-		interpreter = null;
+		interpreter = new T12itp();
+		interpreter.generateLexicon("data", "SpinPhone.lex");
 		phone.connectToT12(interpreter);
 		System.out.println("ConsolePhone und Interpreter verbunden.");
 		phone.loadLexicon("SpinPhone.lex");

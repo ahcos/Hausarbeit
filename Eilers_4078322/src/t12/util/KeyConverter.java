@@ -28,7 +28,7 @@ public class KeyConverter {
 	        case 'a': case 'ä': case 'b': case 'c': return 2;
 	        case 'd': case 'e': case 'f': return 3;
 	        case 'g': case 'h': case 'i': return 4;
-	        case 'j': case 'k': case 'l': return 5;
+	        case 'j': case 'k': case 'l': return 5; 
 	        case 'm': case 'n': case 'o': case 'ö': return 6;
 	        case 'p': case 'q': case 'r': case 's': case 'ß': return 7;
 	        case 't': case 'u': case 'v': case 'ü': return 8;

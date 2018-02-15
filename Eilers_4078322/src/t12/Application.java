@@ -40,8 +40,8 @@ public class Application {
 	 */
 	public static void main(String[] args) {
 
-		useGUIPhone();
-//		 useConsolePhone();
+//		useGUIPhone();
+		 useConsolePhone();
 	}
 
 	/**
@@ -58,7 +58,7 @@ public class Application {
 	private static void useGUIPhone() {
 		SpinPhone phone = new SpinPhone();
 		// Folgende Zeile ändern ( = new MeinT12Interpreter() o.ä.)
-		T12Interpreter interpreter = null;
+		T12Interpreter interpreter = new T12itp();
 		phone.connectToT12(interpreter);
 	}
 
@@ -82,26 +82,26 @@ public class Application {
 	public static void useConsolePhone() {
 		ConsolePhone phone = new ConsolePhone();
 		// Folgende Zeile ändern ( = new MeinT12Interpreter() o.ä.)
-		T12Interpreter interpreter = null;
+		T12itp interpreter = new T12itp();
 		phone.connectToT12(interpreter);
 
 		phone.createLexicon("data", "SpinPhone.lex");
 
-		// phone.loadLexicon("SpinPhone.lex");
+		 phone.loadLexicon("SpinPhone.lex");
 
-		// phone.typeAsNumbers("h");
-		// phone.typeAsNumbers("ha");
-		// phone.typeAsNumbers("hal");
-		// phone.typeAsNumbers("hall");
-		// phone.typeAsNumbers("halla");
+		 phone.typeAsNumbers("h");
+		 phone.typeAsNumbers("ha");
+		 phone.typeAsNumbers("hal");
+		 phone.typeAsNumbers("hall");
+		 phone.typeAsNumbers("halla");
 
-		// phone.typeAsNumbers("v");
-		// phone.typeAsNumbers("vo");
-		// phone.typeAsNumbers("vor");
+		 phone.typeAsNumbers("v");
+		 phone.typeAsNumbers("vo");
+		 phone.typeAsNumbers("vor");
 
-		// phone.displayAlternative();
-		// phone.learn("Informationsverarbeitung");
-		// phone.typeAsNumbers("Informationsverarbeitung");
+		 phone.displayAlternative();
+		 phone.learn("Informationsverarbeitung");
+		 phone.typeAsNumbers("Informationsverarbeitung");
 	}
 
 }
